@@ -43,6 +43,7 @@ jobs:
         with:
           credentials: ${{ secrets.FIRESTORE }}
           databaseUrl: https://firestore-test-9aa41.eur3.firebasedatabase.app
+          databaseType: firestore
           path: tomato
           doc: ${{ github.event.inputs.sem-ver }}
           value: ${{toJson(github.event.inputs.payload)}}
