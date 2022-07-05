@@ -45,4 +45,4 @@ jobs:
           databaseUrl: https://firestore-test-9aa41.eur3.firebasedatabase.app
           path: tomato
           doc: ${{ github.event.inputs.sem-ver }}
-          value: ${{ github.event.inputs.payload }}
+          value: ${{toJson(github.event.inputs.payload)}}
