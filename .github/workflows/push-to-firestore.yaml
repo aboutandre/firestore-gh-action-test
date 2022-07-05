@@ -16,10 +16,10 @@ on:
         type: string
         description: Version number
         required: true
-      payload:
-        type: string
-        description: JSON payload
-        required: true
+#      payload:
+#        type: string
+#        description: JSON payload
+#        required: true
 
 
 env:
@@ -46,4 +46,4 @@ jobs:
           databaseType: firestore
           path: tomato
           doc: ${{ github.event.inputs.sem-ver }}
-          value: ${{toJson(github.event.inputs.payload)}}
+          value: '{"name":"jsdaniell", "password":"mypass"}'
