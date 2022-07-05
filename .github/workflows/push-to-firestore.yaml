@@ -36,6 +36,8 @@ jobs:
     name: Logs the selection for the current build
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          echo "${{fromJson(github.event.inputs.payload)}}"
       - name: Update latest version in realtime database
         uses: w9jds/firebase-trigger@master
         with:
