@@ -40,7 +40,7 @@ jobs:
         uses: w9jds/firebase-trigger@master
         with:
           credentials: ${{ secrets.FIRESTORE }}
-          databaseUrl: https://firestore-test-9aa41.firebaseio.com
+          databaseUrl: https://firestore-test-9aa41.eur3.firebasedatabase.app
           path: tomato
           doc: ${{ github.event.inputs.sem-ver }}
           value: ${{ github.event.inputs.payload }}
